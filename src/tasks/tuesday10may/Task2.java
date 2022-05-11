@@ -1,4 +1,4 @@
-package tasks;
+package tasks.tuesday10may;
 
 import java.io.BufferedReader;
 import java.io.IOException;
