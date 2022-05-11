@@ -1,8 +1,8 @@
 package tasks.wednesday11may.task5;
 
-public class Car extends Vehicle{
-    int numberOfSeats;
-    int gear;
+public  class Car extends Vehicle{
+    protected int numberOfSeats;
+    protected int gear;
 
     public Car(String color, String manufacturer, int mileage, int numberOfSeats) {
         super(color, manufacturer, mileage);

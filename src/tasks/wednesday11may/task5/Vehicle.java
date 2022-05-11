@@ -1,6 +1,6 @@
 package tasks.wednesday11may.task5;
 
-public class Vehicle {
+public abstract class Vehicle {
     protected String color;
     protected String manufacturer;
     protected int speed;
