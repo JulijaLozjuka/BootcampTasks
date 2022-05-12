@@ -32,6 +32,7 @@ public class task1 {
         for (String color:colorsSublist){
             System.out.println(color);
         }
+       List<String> list =  Arrays.asList(colorArray);
 
 
     }
