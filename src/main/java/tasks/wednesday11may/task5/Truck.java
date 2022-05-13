@@ -2,7 +2,7 @@ package tasks.wednesday11may.task5;
 
 public class Truck extends Car{
     private int loadCapacity;
-    private boolean isLoaded;
+    private boolean isLoaded = false;
 
     public Truck(String color, String manufacturer,int mileage, int numberOfSeats, int loadCapacity) {
         super(color, manufacturer,mileage,numberOfSeats);
@@ -22,32 +22,39 @@ public class Truck extends Car{
         return isLoaded;
     }
 
-    public void loadTruck(int weight){
+    public boolean loadTruck(int weight){
         if (weight>getLoadCapacity()){
             System.out.println("too heavy cargo");
-            return;
+            return false;
         }
         if (isLoaded){
             System.out.println("truck has already been loaded");
-            return;
+            return false;
         }
         if (isVehicleDriving){
             System.out.println("first you should stop driving");
-            return;
+            return false;
         }
         System.out.println("truck has been loaded");
         isLoaded = true;
+        return true;
     }
-    public void unLoadTruck(){
+    public boolean unLoadTruck(){
         if (!isLoaded){
             System.out.println("nothing to unload");
-            return;
+            return false;
         }
         if (isVehicleDriving){
             System.out.println("first you should stop driving");
-            return;
+            return false;
         }
         System.out.println("truck has been unloaded");
         isLoaded=false;
+        return true;
     }
+
+    public void setLoaded(boolean loaded) {
+        isLoaded = loaded;
+    }
+
 }

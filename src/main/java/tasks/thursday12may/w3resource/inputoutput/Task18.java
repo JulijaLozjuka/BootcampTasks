@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeMap;
 
 public class Task18 {
     public static void main(String[] args) {
@@ -17,9 +18,7 @@ public class Task18 {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
         int maxLength = 0;
-        //String maxWord = "";
         ArrayList<String> longestWords = new ArrayList<>();
         try(BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))){
             while(bufferedReader.ready()){
@@ -28,7 +27,6 @@ public class Task18 {
                 for (String word:words){
                     if (word.length()>maxLength){
                         maxLength = word.length();
-                        //maxWord = word;
                         longestWords.clear();
                         longestWords.add(word);
                     }
@@ -40,7 +38,6 @@ public class Task18 {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        //System.out.println(" the longest word is \"" + maxWord + "\" and it contains " + maxLength + "symbols");
 
         if (longestWords.size()>1){
             System.out.println(" the longest words contain " + maxLength + " symbols");
@@ -49,6 +46,7 @@ public class Task18 {
         else {
             System.out.println(" the longest word is \"" + longestWords.get(0) + "\" and it contains " + maxLength + "symbols");
         }
+
 
 
 

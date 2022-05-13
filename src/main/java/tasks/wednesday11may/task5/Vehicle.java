@@ -126,4 +126,20 @@ public abstract class Vehicle {
     public Direction getDirection() {
         return direction;
     }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public void setEngineOn(boolean engineOn) {
+        isEngineOn = engineOn;
+    }
+
+    public void setVehicleDriving(boolean vehicleDriving) {
+        isVehicleDriving = vehicleDriving;
+    }
+
+    public void setDirection(Direction direction) {
+        this.direction = direction;
+    }
 }
