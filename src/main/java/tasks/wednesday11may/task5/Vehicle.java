@@ -1,5 +1,7 @@
 package tasks.wednesday11may.task5;
 
+import java.util.logging.Logger;
+
 public abstract class Vehicle {
     protected String color;
     protected String manufacturer;
@@ -8,6 +10,7 @@ public abstract class Vehicle {
     protected boolean isEngineOn = false;
     protected boolean isVehicleDriving = false;
     protected Direction direction;
+
 
 
     public Vehicle(String color, String manufacturer, int mileage) {

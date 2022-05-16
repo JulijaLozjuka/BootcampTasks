@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 
 public class Task1 {
     public static void main(String[] args) {
+
         /*
         1) Ask user to input two numbers, compare them and output result:
         Input:

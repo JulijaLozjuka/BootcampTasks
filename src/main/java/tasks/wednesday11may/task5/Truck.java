@@ -1,12 +1,22 @@
 package tasks.wednesday11may.task5;
 
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
 public class Truck extends Car{
     private int loadCapacity;
     private boolean isLoaded = false;
+    private static final Logger logger = LogManager.getLogger(Truck.class);
+
+
+
 
     public Truck(String color, String manufacturer,int mileage, int numberOfSeats, int loadCapacity) {
         super(color, manufacturer,mileage,numberOfSeats);
         this.loadCapacity = loadCapacity;
+
     }
 
     public Truck(String color, String manufacturer,int numberOfSeats, int loadCapacity) {
@@ -23,6 +33,13 @@ public class Truck extends Car{
     }
 
     public boolean loadTruck(int weight){
+        System.out.println(logger.getLevel());
+        logger.debug("logger debug level");
+        logger.info("logger info level");
+        logger.warn("logger warn level");
+        logger.error("logger error level");
+        logger.fatal("logger fatal level");
+
         if (weight>getLoadCapacity()){
             System.out.println("too heavy cargo");
             return false;

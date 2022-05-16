@@ -2,11 +2,14 @@ package tasks.wednesday11may.task5;
 
 import org.junit.Test;
 
+import java.util.logging.Logger;
+
 import static org.junit.Assert.*;
 
 public class TruckTest {
 
     Truck truck = new Truck("black","mercedes",40,2,8);
+
 
 
     @Test

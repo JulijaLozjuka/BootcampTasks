@@ -1,7 +1,10 @@
 package tasks.wednesday11may.task5;
 
+
+
 public class Main {
     public static void main(String[] args) {
+
         Truck truck = new Truck("black","isuzu",800,2,7);
         Truck anotherTruck = new Truck("white","volvo",3,5);
         truck.startDriving(50,Direction.FORWARD);
